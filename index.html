@@ -165,6 +165,58 @@
     section{padding:56px 0;}
     .card-row,.plan-cols,.cv-grid,.erfolge-grid{grid-template-columns:1fr;}
   }
+
+  /* ---------- v2 ---------- */
+  .hero h1 .claim{display:block;font-size:.62em;font-weight:700;color:#BFE3FF;margin-top:14px;max-width:none;}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:8px;margin-top:24px;}
+  .hero-stat{background:rgba(255,255,255,.12);border-radius:12px;padding:10px 14px;}
+  .hero-stat b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2rem;line-height:1;font-weight:800;}
+  .hero-stat span{font-size:.8rem;opacity:.85;}
+  .kicker{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--blue);font-size:1.05rem;margin-bottom:6px;}
+  .center{text-align:center;}
+  .lead-p{max-width:68ch;margin:14px auto 0;font-size:1.06rem;color:var(--muted);line-height:1.7;}
+  .home-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start;margin-top:8px;}
+  .home-facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .fact{background:var(--mist);border-radius:14px;padding:18px;}
+  .fact b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2.3rem;line-height:1;color:var(--blue);font-weight:800;}
+  .fact span{font-size:.88rem;color:var(--muted);}
+  .home-list{margin:16px 0 0;padding-left:18px;color:var(--ink);}
+  .home-list li{margin-bottom:8px;}
+  .bring-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:34px;}
+  .bring{border-radius:14px;padding:24px;}
+  .bring h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.45rem;font-weight:700;margin-bottom:8px;}
+  .bring p{margin:0 0 10px;font-size:.95rem;}
+  .bring .proof{font-size:.86rem;font-weight:600;border-top:1px solid rgba(0,0,0,.1);padding-top:10px;margin:0;}
+  .b1{background:var(--teal-bg);} .b1 h3{color:var(--teal);}
+  .b2{background:var(--mint-bg);} .b2 h3{color:var(--green);}
+  .b3{background:var(--lime-bg);} .b3 h3{color:var(--lime);}
+  .b4{background:#DCEBF8;} .b4 h3{color:var(--blue);}
+  .story{border-radius:14px;padding:28px 30px;}
+  .story .big{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(3rem,7vw,4.4rem);line-height:.95;}
+  .story h4{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:1.35rem;margin:8px 0 12px;}
+  .story dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:.92rem;}
+  .story dt{font-weight:700;}
+  .story dd{margin:0;}
+  .bridge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:34px;}
+  .bridge{background:var(--white);border-radius:14px;padding:20px 18px;}
+  .bridge.next{background:var(--blue);color:var(--white);}
+  .bridge .step{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.65;}
+  .bridge .name{font-weight:800;font-size:1.1rem;margin:6px 0 2px;}
+  .bridge .brands{font-size:.82rem;font-weight:700;color:var(--blue);margin-bottom:10px;}
+  .bridge.next .brands{color:#BFE3FF;}
+  .bridge ul{margin:0;padding-left:16px;font-size:.86rem;}
+  .bridge li{margin-bottom:4px;}
+  .bridge-note{max-width:68ch;margin:22px auto 0;text-align:center;font-size:.98rem;color:var(--muted);}
+  .operativ{background:var(--navy);color:var(--white);}
+  .operativ .kicker{color:var(--sky);}
+  .operativ blockquote{margin:14px 0 0;font-size:clamp(1.15rem,2.2vw,1.45rem);line-height:1.55;font-weight:500;max-width:62ch;}
+  .operativ .sig{margin-top:14px;opacity:.75;font-size:.95rem;}
+  .skills-line{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
+  .skills-line span{font-size:.82rem;padding:6px 12px;border-radius:999px;background:var(--white);border:1px solid var(--line);color:var(--muted);}
+  @media (max-width:760px){.home-grid,.bring-grid,.bridge-grid{grid-template-columns:1fr;}}
+  @media (min-width:761px) and (max-width:1020px){.bridge-grid{grid-template-columns:repeat(2,1fr);}}
+  .hero-stat b{white-space:nowrap;} .hero-stat span{display:block;line-height:1.3;margin-top:4px;}
+  @media (max-width:480px){.hero-stats{grid-template-columns:repeat(3,1fr);} .hero-stat{padding:8px 10px;} .hero-stat b{font-size:1.45rem;} .hero-stat span{font-size:.72rem;}}
 </style>
 </head>
 <body>
@@ -174,8 +226,12 @@
     <div class="wrap">
       <div class="hero-text">
         <span class="eyebrow">Bewerbung · Bezirksleiter im LEH · Region Mannheim</span>
-        <h1>Marc Webersdorfer – Vertrieb mit Leidenschaft, Umsatzkraft und Biss.</h1>
-        <div class="sub">Verkaufstalent mit Biss</div>
+        <h1>Marc Webersdorfer<span class="claim">Mannheim kenne ich. Das Regal auch.</span></h1>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>Nr. 1</b><span>Lenor-Launch DE</span></div>
+          <div class="hero-stat"><b>Top 10</b><span>Verkäufer national</span></div>
+          <div class="hero-stat"><b>250 %</b><span>LKW-Aktionsziel</span></div>
+        </div>
         <div class="cta-row">
           <a href="#pitch" class="btn btn-white">▶ Zum Video</a>
           <a href="Lebenslauf_Marc_Webersdorfer.pdf" target="_blank" class="btn btn-outline">Lebenslauf (PDF)</a>
@@ -185,95 +241,7 @@
     </div>
   </header>
 
-  <!-- INTRO -->
-  <section class="section-cream">
-    <div class="wrap intro-grid">
-      <div class="intro-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="7" width="20" height="14" rx="2"></rect>
-          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-        </svg>
-      </div>
-      <div>
-        <h2>Ein echter Partner für Handel &amp; Team.</h2>
-        <p>Ich bringe Menschen, Marken und Regale zusammen – mit klaren Zielen, Energie auf der Fläche und einem Gespür für nachhaltige Kundenbeziehungen. 25+ Jahre FMCG-Vertrieb, davon 12 Jahre als Bezirksleiter im Außendienst bei einem führenden Konsumgüterkonzern.</p>
-        <div class="tag-row">
-          <span class="tag">POS-Exzellenz</span>
-          <span class="tag">Vertrieb</span>
-          <span class="tag">Verbindlichkeit</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrap card-row">
-      <div class="card card-white">
-                <h3>POS-Exzellenz</h3>
-          <p>Ich sorge dafür, dass Marken im Regal sichtbar werden – mit aufmerksamkeitsstarken Platzierungen, klaren Routinen und einem sicheren Blick für die Details, die Kaufimpulse auslösen.</p>
-      </div>
-      <div class="card card-red">
-        <h3>Kundenorientierung</h3>
-        <p>Vertrauen entsteht für mich durch Zuverlässigkeit und konkrete Lösungen. Ich verstehe die Ziele meiner Handelspartner und entwickle Maßnahmen, die für beide Seiten funktionieren.</p>
-      </div>
-      <div class="card card-outline">
-        <h3>Zuverlässige Umsetzung</h3>
-        <p>Von der Idee bis zur Auswertung halte ich Zusagen ein und bleibe nah an der Umsetzung. So werden aus guten Konzepten messbare Ergebnisse im Tagesgeschäft.</p>
-      </div>
-    </div>
-  </section>
-
-    <!-- ERFAHRUNG IM ECHTEN VERTRIEB -->
-  <section class="exp-banner">
-    <div class="wrap">
-      <div class="exp-intro">
-        <div class="exp-kicker">Ich bringe etwas mit, das man nicht studieren, downloaden oder in einem CRM abbilden kann:</div>
-        <h2>Erfahrung im echten Vertrieb.</h2>
-        <div class="exp-tagline">Zehn Fähigkeiten, die nur im echten Kundenkontakt entstehen – nicht im Hörsaal.</div>
-      </div>
-            <div class="exp-grid">
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
-          <div><h4>Menschen lesen</h4><p>Mikro-Signale, Körpersprache, Dynamiken spüren.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg></div>
-          <div><h4>Souveränität in Krisen</h4><p>Ruhig bleiben bei Druck und Konflikten.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"></path></svg></div>
-          <div><h4>Beziehungsaufbau</h4><p>Echtes Vertrauen und emotionale Bindung schaffen.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
-          <div><h4>Storytelling</h4><p>Nutzen anschaulich vermitteln.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
-          <div><h4>Komplexe Verhandlungen</h4><p>Preisgespräche und schwierige Deals souverän führen.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></div>
-          <div><h4>Netzwerkpflege</h4><p>Langfristige Beziehungen aktiv knüpfen.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-          <div><h4>Einwände antizipieren</h4><p>Einwände frühzeitig erkennen und entkräften.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-          <div><h4>Strategisches Denken</h4><p>Muster und Marktbewegungen erkennen.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
-          <div><h4>Kundenpsychologie</h4><p>Emotionale und soziale Entscheidungsprozesse verstehen.</p></div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></div>
-          <div><h4>Langfristige Kundenbindung</h4><p>Kunden über Jahre hinweg betreuen.</p></div>
-        </div>
-      </div>
-  </section>
-
-    <!-- PITCH VIDEO -->
+<!-- PITCH VIDEO -->
   <section id="pitch" class="pitch section-cream">
     <div class="wrap">
       <h2>Mein Pitch in 2 Minuten</h2>
@@ -286,57 +254,104 @@
     </div>
   </section>
 
-  <!-- LEBENSLAUF -->
+    <!-- HEIMSPIEL -->
   <section class="section-white">
-    <div class="wrap cv-grid">
-      <div>
-        <h2>Lebenslauf in Kürze</h2>
-        <p>25+ Jahre Erfahrung im FMCG-Vertrieb, im Aufbau starker Handelspartnerschaften und in der Zusammenarbeit mit leistungsstarken Verkaufsteams im Handel. Mein Schwerpunkt: Potenziale auf der Fläche sichtbar und messbar machen. Diplom-Betriebswirt (FH), International Business, FH Darmstadt.</p>
-        <div style="margin-top:20px;">
-          <a href="Lebenslauf_Marc_Webersdorfer.pdf" target="_blank" class="btn btn-blue">⬇ Lebenslauf als PDF</a>
+    <div class="wrap">
+      <div class="kicker">Heimspiel</div>
+      <div class="home-grid">
+        <div>
+          <h2 class="title">Der Bezirk Mannheim ist für mich kein Neuland.</h2>
+          <p class="lead-p" style="margin-left:0;">12 Jahre war ich als Field Account Manager bei Procter &amp; Gamble im Lebensmitteleinzelhandel unterwegs – mit eigenem Gebiet von Mannheim und Heidelberg bis Kaiserslautern und ins Saarland, später auch im Rhein-Main-Gebiet.</p>
+          <ul class="home-list">
+            <li><b>Eigener Kundenstamm</b> mit 80+ Verbrauchermärkten: Real, REWE, Kaufland, Globus, Edeka inkl. E-Center und Marktkauf.</li>
+            <li><b>Selbstständige Händler und Mehrbetriebsunternehmer</b>, u. a. Scheck-In in Mannheim, Viernheim und Heidelberg – mit eigenen Jahresplanungsgesprächen bei einzelnen Kunden.</li>
+            <li><b>Eigenständige Tourenplanung</b> im 2-Wochen-Besuchsrhythmus.</li>
+          </ul>
+        </div>
+        <div class="home-facts">
+          <div class="fact"><b>12</b><span>Jahre eigener Bezirk im LEH</span></div>
+          <div class="fact"><b>80+</b><span>Verbrauchermärkte im Kundenstamm</span></div>
+          <div class="fact"><b>2</b><span>Wochen Besuchsrhythmus</span></div>
+          <div class="fact"><b>25+</b><span>Jahre FMCG-Vertrieb</span></div>
         </div>
       </div>
-            <div class="stations-box">
-        <h3>Stationen</h3>
-        <p>Field Account Manager (Mannheim · Heidelberg · Kaiserslautern · Saarland) · Category Management · Market Planning · 23 Jahre bei Procter & Gamble, davor Intersnack und Wolf Bergstrasse, seither B2B-Vertrieb und digitale Weiterqualifizierung</p>
+    </div>
+  </section>
+
+  <!-- MITBRINGEN -->
+  <section class="section-cream">
+    <div class="wrap">
+      <div class="kicker center">Passend zur Aufgabe</div>
+      <h2 class="title center">Was ich in den Bezirk mitbringe</h2>
+      <div class="bring-grid">
+        <div class="bring b1">
+          <h3>Distribution &amp; Sortiment</h3>
+          <p>Sortimentslücken erkennen, Neuprodukte schnell ins Regal bringen und selbstständige Händler auch bei Kann-Listungen überzeugen.</p>
+          <p class="proof">Beleg: 90 % Distribution bei Produkteinführungen in 2 statt 4 Wochen · Gillette-Freiwahl: rund 15–20 Edeka-Händler angesprochen, die Mehrheit hat umgesetzt.</p>
+        </div>
+        <div class="bring b2">
+          <h3>Perfect Store &amp; Verkaufsförderung</h3>
+          <p>Regalqualität, Zweitplatzierungen und Aktionsflächen so umsetzen, dass Marken im Sichtfeld stehen – und Talondurchgänge mit Mengen und Platzierungen verhandeln.</p>
+          <p class="proof">Beleg: Rang 1 in Deutschland mit 120 Zweitplatzierungen beim Lenor-Launch 2016 · 5 statt 1–2 LKW-Aktionen.</p>
+        </div>
+        <div class="bring b3">
+          <h3>Kennzahlen &amp; Bezirkssteuerung</h3>
+          <p>Vertriebskennzahlen über Quartals- und Monatspläne steuern, Potenziale und Standorte analysieren, Bestellmengen am POS führen und Out-of-Stock vermeiden.</p>
+          <p class="proof">Beleg: Top 10 Deutschland (Waschmittel) · Top 3 Region Südwest bei SBD-Compliance und Launch-Volumen Zahnpflege.</p>
+        </div>
+        <div class="bring b4">
+          <h3>Partner für Handel, KAM &amp; Team</h3>
+          <p>Vertriebsstrategien gemeinsam mit dem Key Account Management in der Region umsetzen, Schulungen und Workshops durchführen und Wissen im Team weitergeben.</p>
+          <p class="proof">Beleg: „Mission Possible – We Can Award" für eine bereichsübergreifende Team-Initiative.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ERFOLGE -->
-  <section class="erfolge section-cream">
+  <section class="erfolge section-white">
     <div class="wrap">
-      <h2>Meine besten Erfolge</h2>
+      <div class="kicker center">Nicht behauptet, sondern belegt</div>
+      <h2>Meine Erfolge im Detail</h2>
       <div class="erfolge-grid">
-        <div class="erfolg-card e1">
-          <div class="big">TOP 10</div>
-          <h4>Top-Platzierung im Ranking</h4>
-          <p>Herausforderung: hoher Wettbewerbsdruck im Waschmittelsegment. Lösung: konsequente POS-Exzellenz und enge Handelsbetreuung. Ergebnis: Top-10-Platzierung deutschlandweit.</p>
-        </div>
-        <div class="erfolg-card e2">
+        <div class="story e2">
           <div class="big">NR. 1</div>
-          <h4>Nr. 1 in Deutschland</h4>
-          <p>Herausforderung: geringe Sichtbarkeit einer Produktneueinführung. Lösung: bundesweite Zweitplatzierungs-Aktion. Ergebnis: Platz 1 in Deutschland mit 120 Displays.</p>
+          <h4>Lenor-Unstoppables-Launch 2016</h4>
+          <dl><dt>Aufgabe</dt><dd>Neue Produktlinie schnell sichtbar machen – über Zweitplatzierungen.</dd>
+          <dt>Mein Beitrag</dt><dd>Frühzeitige Terminierung mit Schlüsselkunden, konsequente Verkaufsförderung am POS.</dd>
+          <dt>Ergebnis</dt><dd>Rang 1 in Deutschland: 120 Zweitplatzierungen im eigenen Gebiet – 15 % der 800 des Teams Südwest, davon 30 in einem einzigen Markt.</dd></dl>
         </div>
-        <div class="erfolg-card e3">
+        <div class="story e1">
+          <div class="big">90 %</div>
+          <h4>Distribution bei Produkteinführungen</h4>
+          <dl><dt>Aufgabe</dt><dd>Neuprodukte innerhalb von 4 Wochen ins Regal bringen.</dd>
+          <dt>Mein Beitrag</dt><dd>Enge Abstimmung der Regalumsetzung mit den Marktleitern.</dd>
+          <dt>Ergebnis</dt><dd>90 % Distribution in den betreuten Märkten nach 2 Wochen – doppelt so schnell wie vorgegeben.</dd></dl>
+        </div>
+        <div class="story e3">
           <div class="big">250 %</div>
-          <h4>Aktionsziel weit übertroffen</h4>
-          <p>Herausforderung: ambitionierte Vorgabe für eine LKW-Aktion. Lösung: gezielte, priorisierte Handelsansprache. Ergebnis: 250 % Zielerreichung.</p>
+          <h4>LKW-Aktionen Wasch- &amp; Reinigungsmittel</h4>
+          <dl><dt>Aufgabe</dt><dd>1–2 LKW-Aktionen im Gebiet umsetzen.</dd>
+          <dt>Mein Beitrag</dt><dd>Händler frühzeitig informiert, zahlreiche Einzeltermine, selbst angepackt – bis zur Anlieferung um 5:30 Uhr.</dd>
+          <dt>Ergebnis</dt><dd>5 LKW-Aktionen statt 1–2.</dd></dl>
         </div>
-        <div class="erfolg-card e4">
-          <div class="big">AWARD</div>
-          <h4>Teamleistung ausgezeichnet</h4>
-          <p>Herausforderung: bereichsübergreifende Zusammenarbeit stärken. Lösung: aktive Mitgestaltung einer Team-Initiative. Ergebnis: „Mission Possible – We Can Award" gewonnen.</p>
+        <div class="story e4">
+          <div class="big">TOP 10</div>
+          <h4>Ranking Waschmittel Deutschland</h4>
+          <dl><dt>Aufgabe</dt><dd>Im hart umkämpften Waschmittelsegment Ziele über Jahre halten.</dd>
+          <dt>Mein Beitrag</dt><dd>Konsequente POS-Arbeit und enge Betreuung der Handelspartner.</dd>
+          <dt>Ergebnis</dt><dd>Top 10 der Verkäufer in Deutschland; jährliche Wachstumsvorgabe durchgängig erfüllt.</dd></dl>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALERIE -->
+<!-- GALERIE -->
   <section class="gallery section-white">
     <div class="wrap">
-      <h2>POS-Aufbauten, die Lust machen</h2>
-      <p class="hint">Reale POS-Aktionen aus über 25 Jahren FMCG-Vertrieb – von Zweitplatzierungen bis zu großflächigen Themenwelten.</p>
+      <div class="kicker center">Kreative regionale Verkaufsförderung</div>
+      <h2>POS-Aufbauten aus der Praxis</h2>
+      <p class="hint">Echte Aufbauten aus meinem Bezirk – von der Zweitplatzierung über die Aktion im Einkaufszentrum bis zur Verkaufsaktion aus dem Kofferraum.</p>
       <div class="gallery-grid">
         <div class="gallery-item tall"><img src="pos-ariel.jpg" alt="Ariel Gondelkopf Aufbau"></div>
         <div class="gallery-item"><img src="pos-blendamed.jpg" alt="Blend-a-med Palettenaufbau"></div>
@@ -351,9 +366,10 @@
   </section>
 
     <!-- WIE ICH ARBEITE -->
-  <section class="work">
+  <section class="work" style="background:var(--white);">
     <div class="wrap">
-      <h2>Wie ich arbeite: präsent, strukturiert, umsetzungsstark</h2>
+      <div class="kicker center">Perfect Store ist für mich kein Konzept, sondern Alltag</div>
+      <h2>So arbeite ich im Bezirk</h2>
       <div class="work-grid">
         <div class="work-card">
           <div class="work-title">Besuchsplanung nach Potenzial</div>
@@ -383,85 +399,97 @@
     </div>
   </section>
 
-  <!-- DETAIL 100-TAGE -->
-  <section class="plan-detail section-cream">
+    <!-- NEUES REGAL -->
+  <section class="section-white">
     <div class="wrap">
-      <h2>Mein Plan für die ersten 100 Tage</h2>
-      <p class="lead">Präsent im Markt. Klar in der Analyse. Konsequent in der Umsetzung.</p>
-      <div class="plan-cols">
-        <div class="pd-card pd-white">
-          <div class="phase-label">Tag 1–30</div>
-          <div class="phase-title">Kennenlernen &amp; Analyse</div>
-          <div class="goal">Ziel: Den Bezirk, die Menschen und die größten Potenziale fundiert verstehen.</div>
-          <ul>
-            <li>Alle A-Kunden in Mannheim, Heidelberg und Umgebung besuchen</li>
-            <li>Distribution, Verfügbarkeit, Regalqualität und Zweitplatzierungen analysieren</li>
-            <li>Wettbewerber, Preise, Aktionen und Sortimentsentwicklung systematisch erfassen</li>
-            <li>Interne Ansprechpartner, Abläufe und Entscheidungswege kennenlernen</li>
-          </ul>
-          <div class="result">Ergebnis: Eine belastbare Prioritätenliste für Märkte, Maßnahmen und Kundenpotenziale.</div>
-        </div>
-        <div class="pd-card pd-red">
-          <div class="phase-label">Tag 31–60</div>
-          <div class="phase-title">Quick Wins &amp; Beziehungen</div>
-          <div class="goal">Ziel: Erste sichtbare Verbesserungen schaffen und tragfähige Handelsbeziehungen aufbauen.</div>
-          <ul>
-            <li>Drei bis fünf geeignete Zweitplatzierungen realisieren und vereinbaren</li>
-            <li>Regal-Checks mit Filialleitungen und klaren Folgeterminen durchführen</li>
-            <li>Eine strukturierte Feedback-Runde mit Marktverantwortlichen durchführen</li>
-          </ul>
-          <div class="result">Ergebnis: Frühe, messbare POS-Verbesserungen und verlässliche Vereinbarungen mit den wichtigsten Kunden.</div>
-        </div>
-        <div class="pd-card pd-yellow">
-          <div class="phase-label">Tag 61–100</div>
-          <div class="phase-title">Strategie &amp; Skalierung</div>
-          <div class="goal">Ziel: Erfolgreiche Routinen im Gebiet verbindlich verankern und den gesamten Bezirk systematisch steuern.</div>
-          <ul>
-            <li>Bezirksziele für Umsatz, Distribution, Regalanteil und Zweitplatzierungen optimieren</li>
-            <li>Besuchs- und Routenplanung nach Potenzial, Handlungsbedarf und Wirtschaftlichkeit optimieren</li>
-            <li>Ein kompaktes Reporting mit den wichtigsten Kennzahlen und Verantwortlichkeiten etablieren</li>
-            <li>Erfahrungen aus den ersten 100 Tagen in einen belastbaren Maßnahmenplan überführen</li>
-          </ul>
-          <div class="result">Ergebnis: Ein transparent gesteuerter Bezirk mit klarer Roadmap für nachhaltiges Wachstum.</div>
-        </div>
+      <div class="kicker center">Warum Danone?</div>
+      <h2 class="title center">Neues Regal. Bekanntes Gebiet.</h2>
+      <p class="lead-p center">Ich habe in meiner Laufbahn mehrfach die Kategorie gewechselt – und jedes Mal war es im Kern derselbe Job: Verfügbarkeit sichern, Platzierung gewinnen, Händler überzeugen. Das Kühlregal ist für mich neu. Die Disziplin dahinter nicht.</p>
+      <div class="bridge-grid">
+        <div class="bridge"><div class="step">Lebensmittel</div><div class="name">Snacks &amp; Food</div><div class="brands">Pom-Bär · Chio · Pringles</div>
+          <ul><li>MHD-Management</li><li>Bestandssteuerung</li><li>Out-of-Stock vermeiden</li></ul></div>
+        <div class="bridge"><div class="step">Drogerie im LEH</div><div class="name">Wasch- &amp; Reinigungsmittel</div><div class="brands">Lenor · Ariel</div>
+          <ul><li>Zweitplatzierungen</li><li>Aktionsgeschäft</li><li>Rang 1 Deutschland</li></ul></div>
+        <div class="bridge"><div class="step">Neuer Kanal</div><div class="name">Elektrofachhandel</div><div class="brands">Oral-B · Braun</div>
+          <ul><li>Zusätzlich übernommen</li><li>Euronics, Saturn, MediaMarkt</li><li>Neue Kundenstruktur</li></ul></div>
+        <div class="bridge next"><div class="step">Nächste Station</div><div class="name">Danone</div><div class="brands">Actimel · Alpro · Fruchtzwerge · Volvic</div>
+          <ul><li>Frische &amp; Rotation</li><li>Perfect Store im Kühlregal</li><li>Im Bezirk Mannheim</li></ul></div>
       </div>
-      
+      <p class="bridge-note">Danone-Marken kennt der Handel, und Verbraucher suchen sie gezielt – eine gute Ausgangslage für jedes Gespräch mit einem Marktleiter. Den Bezirk dafür kenne ich schon.</p>
     </div>
   </section>
 
-  <!-- WARUM DANONE -->
-  <section class="why-danone section-white">
+  <!-- WARUM OPERATIV -->
+  <section class="operativ">
     <div class="wrap">
-      <h2>Warum Danone?</h2>
-      <p class="lead">Meine Vertriebslaufbahn hat mit Pom-Bär und Chio Chips im Lebensmittelhandel begonnen, bei Procter &amp; Gamble kamen Pringles, Waschmittel und Körperpflege dazu. Bei Danone kommt beides zusammen: Marken, die der Handel kennt und die Verbraucher gezielt suchen – und ein Sortiment, bei dem Verfügbarkeit, Regalqualität und Präsenz am POS jeden Tag zählen.</p>
-      <p class="lead">Dazu kommt das Gebiet: Mannheim und Heidelberg kenne ich aus vielen Jahren im eigenen Bezirk – die Märkte, die Händler und die Wege dazwischen. Genau dort möchte ich wieder tun, was mir im Vertrieb am meisten liegt: raus zum Kunden, ans Regal und einen Bezirk eigenverantwortlich weiterentwickeln.</p>
-      <div class="journey-grid">
-        <div class="journey-card">
-          <div class="journey-step">Station 1</div>
-          <div class="journey-name">Wolf Bergstrasse</div>
-          <div class="journey-tag">Familiär &amp; bodenständig</div>
-          <div class="journey-desc">Mittelständisches Familienunternehmen – hier habe ich Vertrieb von der Pike auf gelernt.</div>
+      <div class="kicker">Warum nach 25+ Jahren wieder operativ?</div>
+      <blockquote>Weil mir dieser Teil des Vertriebs am meisten liegt. Ich möchte raus zum Kunden, Märkte eigenverantwortlich entwickeln und am Regal sehen, was aus einer Vereinbarung tatsächlich geworden ist. Ein größerer Titel ist für mich nicht das Ziel. Ich suche eine Aufgabe, die ich langfristig ausfüllen kann, in der meine Erfahrung zählt und in der ich selbst etwas bewege.</blockquote>
+      <div class="sig">— Marc Webersdorfer</div>
+    </div>
+  </section>
+
+  <!-- DETAIL 100-TAGE -->
+  <section class="plan-detail">
+    <div class="wrap">
+      <h2>So würde ich den Bezirk Mannheim angehen</h2>
+      <p class="lead">Die ersten 100 Tage: verstehen, aktivieren, verankern.</p>
+      <div class="plan-cols">
+        <div class="pd-card pd-white">
+          <div class="phase-label">Tag 1–30</div>
+          <div class="phase-title">Verstehen &amp; analysieren</div>
+          <div class="goal">Ziel: Bezirk, Kunden und Potenziale fundiert kennenlernen.</div>
+          <ul>
+            <li>Alle A-Kunden in Mannheim, Heidelberg und Umgebung besuchen</li>
+            <li>Distribution, Verfügbarkeit und Regalqualität im Kühlregal prüfen – inkl. MHD und Rotation</li>
+            <li>Wettbewerb, Preise und Aktionen systematisch erfassen</li>
+            <li>Ziele und Kundenprojekte mit dem Key Account Management abstimmen</li>
+          </ul>
+          <div class="result">Ergebnis: Eine belastbare Prioritätenliste für Märkte und Maßnahmen.</div>
         </div>
-        <div class="journey-card">
-          <div class="journey-step">Station 2</div>
-          <div class="journey-name">Intersnack</div>
-          <div class="journey-tag">Gewachsen &amp; bodenständig geblieben</div>
-          <div class="journey-desc">Größer und internationaler, aber mit spürbar familiärer Prägung – Pom-Bär und Chio als erste starke Marken.</div>
+        <div class="pd-card pd-red">
+          <div class="phase-label">Tag 31–60</div>
+          <div class="phase-title">Potenziale aktivieren</div>
+          <div class="goal">Ziel: Erste sichtbare Verbesserungen und tragfähige Beziehungen.</div>
+          <ul>
+            <li>Priorisierte Distributionslücken schließen</li>
+            <li>Erste zusätzliche Platzierungen und Aktionen mit den Märkten vereinbaren</li>
+            <li>Gespräche mit selbstständigen Händlern und Mehrbetriebsunternehmern führen</li>
+            <li>Erste Ergebnisse auswerten und nachsteuern</li>
+          </ul>
+          <div class="result">Ergebnis: Messbare Verbesserungen am POS und verlässliche Vereinbarungen.</div>
         </div>
-        <div class="journey-card">
-          <div class="journey-step">Station 3</div>
-          <div class="journey-name">Procter &amp; Gamble</div>
-          <div class="journey-tag">Konzern-Exzellenz</div>
-          <div class="journey-desc">23 Jahre professionelle Vertriebssysteme und Prozesse auf Weltklasse-Niveau mitgestaltet.</div>
-        </div>
-        <div class="journey-card accent">
-          <div class="journey-step">Nächste Station</div>
-          <div class="journey-name">Danone</div>
-          <div class="journey-tag">Starke Marken, bekanntes Gebiet</div>
-          <div class="journey-desc">Volvic, Alpro, Actimel, Fruchtzwerge – im Bezirk Mannheim, den ich aus eigener Erfahrung kenne.</div>
+        <div class="pd-card pd-yellow">
+          <div class="phase-label">Tag 61–100</div>
+          <div class="phase-title">Wachstum verankern</div>
+          <div class="goal">Ziel: Erfolgreiche Routinen im ganzen Bezirk etablieren.</div>
+          <ul>
+            <li>Erfolgreiche Maßnahmen auf weitere Märkte übertragen</li>
+            <li>Tourenplanung nach Potenzial und Besuchsfrequenz optimieren</li>
+            <li>KPIs zu Distribution, Verfügbarkeit und Platzierung regelmäßig steuern</li>
+            <li>Maßnahmenplan für die weitere Bezirksentwicklung erstellen</li>
+          </ul>
+          <div class="result">Ergebnis: Ein klar gesteuerter Bezirk mit Plan für die nächsten Monate.</div>
         </div>
       </div>
     </div>
+  </section>
+
+<!-- LEBENSLAUF -->
+  <section class="section-white">
+    <div class="wrap cv-grid">
+      <div>
+        <h2>Lebenslauf in Kürze</h2>
+        <p>25+ Jahre Erfahrung im FMCG-Vertrieb, im Aufbau starker Handelspartnerschaften und in der Zusammenarbeit mit leistungsstarken Verkaufsteams im Handel. Mein Schwerpunkt: Potenziale auf der Fläche sichtbar und messbar machen. Diplom-Betriebswirt (FH), International Business, FH Darmstadt.</p>
+        <div style="margin-top:20px;">
+          <a href="Lebenslauf_Marc_Webersdorfer.pdf" target="_blank" class="btn btn-blue">⬇ Lebenslauf als PDF</a>
+        </div>
+      </div>
+            <div class="stations-box">
+        <h3>Stationen</h3>
+        <p>Field Account Manager (Mannheim · Heidelberg · Kaiserslautern · Saarland) · Category Management · Market Planning · 23 Jahre bei Procter & Gamble, davor Intersnack und Wolf Bergstrasse, seither B2B-Vertrieb und digitale Weiterqualifizierung</p>
+      </div>
+    </div>
+    <div class="wrap"><div class="skills-line"><span>Strukturierte Besuchsdokumentation</span><span>KPI-orientierte Steuerung</span><span>Digitale Vertriebsprozesse</span><span>Salesforce &amp; HubSpot (zertifiziert)</span><span>3 IHK-Zertifikate Digitaler Vertrieb</span></div></div>
   </section>
 
   <!-- KONTAKT -->
@@ -481,6 +509,6 @@
     Marc Webersdorfer · Bezirksleiter · <a href="tel:+491777932783" style="color:inherit;text-decoration:underline;">+49 177 7932783</a>
   </footer>
 
-    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e00f872d65384c59867030170805bf1e"}'></script><!-- End Cloudflare Web Analytics -->
+      <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e00f872d65384c59867030170805bf1e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
