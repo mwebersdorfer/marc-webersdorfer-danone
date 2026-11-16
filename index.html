@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marc Webersdorfer – Bezirksleiter LEH Region Mannheim</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%23005EB8'/%3E%3Cpath d='M 28 76 L 28 32 L 50 56 L 72 32 L 72 76' fill='none' stroke='%23FFFFFF' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#005EB8; --navy:#002677; --sky:#3DB0FF; --mist:#EEF5FB;
+    --teal-bg:#D3EAEA; --teal:#00918F;
+    --mint-bg:#D1E9DB; --green:#0B7F3D;
+    --lime-bg:#E2F1D8; --lime:#3A9B12;
+    --ink:#101820; --muted:#4A5563; --line:#DCE3EA; --white:#FFFFFF;
+    --maxw:1040px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:'Figtree',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Figtree',sans-serif;margin:0;line-height:1.15;letter-spacing:-.01em;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  .caps{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.02em;}
+  .eyebrow{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px;background:rgba(255,255,255,.16);}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Figtree',sans-serif;font-weight:700;font-size:.98rem;padding:13px 28px;border-radius:999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background .15s ease,color .15s ease,transform .15s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-white{background:var(--white);color:var(--blue);}
+  .btn-white:hover{background:var(--mist);}
+  .btn-blue{background:var(--blue);color:var(--white);}
+  .btn-blue:hover{background:var(--navy);}
+  .btn-outline{background:transparent;color:var(--white);border-color:var(--white);}
+  .btn-outline:hover{background:rgba(255,255,255,.12);}
+
+  /* HERO */
+  .hero{background:var(--blue);color:var(--white);padding:56px 0 0;overflow:hidden;position:relative;}
+  .hero::after{content:"";position:absolute;right:-180px;top:-140px;width:560px;height:560px;border-radius:50%;background:var(--sky);opacity:.22;}
+  .hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:end;gap:24px;position:relative;z-index:1;}
+  .hero-text{padding-bottom:56px;}
+  .hero .eyebrow{margin-bottom:22px;}
+  @media (min-width:761px){.hero .eyebrow{white-space:nowrap;}}
+  .hero h1{font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800;max-width:20ch;}
+  .hero .sub{font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:clamp(1.3rem,2.6vw,1.75rem);color:#BFE3FF;margin-top:16px;}
+  .hero .cta-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;}
+  .hero-photo img{width:118%;max-width:600px;height:auto;display:block;margin-left:auto;margin-right:-8%;}
+  @media (max-width:760px){.hero .wrap{grid-template-columns:1fr;}.hero-text{padding-bottom:8px;}.hero-photo img{width:100%;max-width:360px;margin:0 auto;}}
+
+  section{padding:72px 0;}
+  .section-cream{background:var(--white);}
+  .section-white{background:var(--mist);}
+  h2.title{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;}
+
+  /* INTRO */
+  .intro-grid{display:grid;grid-template-columns:1fr;gap:0;}
+  .intro-icon{display:none;}
+  .intro-grid h2{font-size:clamp(1.7rem,3.4vw,2.5rem);font-weight:800;}
+  .intro-grid p{margin-top:14px;max-width:62ch;font-size:1.08rem;color:var(--muted);}
+  .tag-row{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px;}
+  .tag{font-size:.88rem;font-weight:600;padding:7px 16px;border-radius:999px;border:1.5px solid var(--blue);color:var(--blue);background:var(--white);}
+  .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px;}
+  .card{border-radius:14px;padding:26px 24px 28px;}
+  .card h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.5rem;font-weight:700;margin-bottom:10px;letter-spacing:.01em;}
+  .card p{font-size:.95rem;margin:0;}
+  .card-white{background:var(--teal-bg);} .card-white h3{color:var(--teal);}
+  .card-red{background:var(--mint-bg);} .card-red h3{color:var(--green);}
+  .card-outline{background:var(--lime-bg);} .card-outline h3{color:var(--lime);}
+
+  /* ERFAHRUNG */
+  .exp-banner{background:var(--navy);color:var(--white);}
+  .exp-banner .exp-intro{text-align:center;max-width:680px;margin:0 auto 34px;}
+  .exp-banner .exp-kicker{font-size:1rem;opacity:.8;margin-bottom:8px;}
+  .exp-banner h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;}
+  .exp-banner .exp-tagline{margin-top:10px;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-weight:700;color:var(--sky);font-size:1.2rem;}
+  .exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px 44px;max-width:840px;margin:0 auto;}
+  .exp-item{display:flex;gap:14px;align-items:center;}
+  .exp-icon{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;}
+  .exp-icon svg{width:17px;height:17px;stroke:var(--navy);}
+  .exp-item h4{font-weight:700;font-size:.98rem;margin-bottom:1px;}
+  .exp-item p{margin:0;font-size:.85rem;opacity:.82;line-height:1.35;}
+  @media (max-width:760px){.exp-grid{grid-template-columns:1fr;}}
+
+  /* PITCH */
+  .pitch h2{text-align:center;font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;}
+  .video-frame{margin-top:30px;aspect-ratio:16/9;border-radius:16px;background:#0b1530;overflow:hidden;box-shadow:0 18px 40px rgba(0,38,119,.18);}
+
+  /* LEBENSLAUF */
+  .cv-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start;}
+  .cv-grid h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;}
+  .cv-grid p{margin-top:12px;font-size:1rem;max-width:54ch;color:var(--muted);}
+  .stations-box{background:var(--blue);color:var(--white);border-radius:14px;padding:26px;}
+  .stations-box h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.35rem;font-weight:700;margin-bottom:10px;}
+  .cv-grid .stations-box p{margin:0;font-size:.93rem;line-height:1.65;color:var(--white);max-width:none;}
+
+  /* ERFOLGE */
+  .erfolge h2{text-align:center;font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;margin-bottom:34px;}
+  .erfolge-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .erfolg-card{border-radius:14px;padding:30px 30px 32px;}
+  .erfolg-card .big{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(3rem,7vw,4.6rem);line-height:.95;}
+  .erfolg-card h4{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-weight:700;font-size:1.35rem;margin:8px 0 10px;color:var(--ink);}
+  .erfolg-card p{margin:0;font-size:.92rem;color:#25313d;}
+  .e1{background:var(--teal-bg);} .e1 .big{color:var(--teal);}
+  .e2{background:var(--mint-bg);} .e2 .big{color:var(--green);}
+  .e3{background:var(--mint-bg);} .e3 .big{color:var(--green);}
+  .e4{background:var(--lime-bg);} .e4 .big{color:var(--lime);}
+
+  /* GALERIE */
+  .gallery h2{text-align:center;font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;}
+  .gallery .hint{text-align:center;font-size:1rem;color:var(--muted);margin:10px auto 0;max-width:58ch;}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:210px;gap:10px;margin-top:30px;}
+  .gallery-item{border-radius:12px;overflow:hidden;}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;}
+  .gallery-item.tall{grid-row:span 2;}
+  @media (max-width:760px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}}
+
+  /* WIE ICH ARBEITE */
+  .work{background:var(--white);}
+  .work h2{text-align:center;font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;margin-bottom:30px;}
+  .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .work-card{background:var(--mist);border-radius:14px;padding:22px 20px;min-height:150px;border-top:4px solid var(--sky);}
+  .work-card.accent{background:var(--blue);color:var(--white);border-top-color:var(--navy);}
+  .work-card .work-title{font-weight:700;font-size:1.05rem;margin-bottom:8px;}
+  .work-card .work-desc{font-size:.9rem;line-height:1.5;}
+  @media (max-width:760px){.work-grid{grid-template-columns:1fr;}}
+
+  /* 100 TAGE */
+  .plan-detail{background:var(--mist);}
+  .plan-detail h2{text-align:center;font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;}
+  .plan-detail .lead{text-align:center;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-weight:700;font-size:1.2rem;color:var(--blue);margin-top:10px;}
+  .plan-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px;}
+  .pd-card{border-radius:14px;padding:24px 22px;}
+  .pd-white{background:var(--white);}
+  .pd-red{background:var(--blue);color:var(--white);}
+  .pd-yellow{background:var(--navy);color:var(--white);}
+  .pd-card .phase-label{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.75;}
+  .pd-card .phase-title{font-weight:800;font-size:1.2rem;margin:6px 0 6px;}
+  .pd-card .goal{font-size:.88rem;font-style:italic;opacity:.85;margin-bottom:10px;}
+  .pd-card ul{margin:0 0 14px;padding-left:18px;font-size:.9rem;}
+  .pd-card li{margin-bottom:6px;}
+  .pd-card .result{font-size:.86rem;font-weight:700;border-top:1px solid rgba(0,0,0,.12);padding-top:12px;}
+  .pd-red .result,.pd-yellow .result{border-top-color:rgba(255,255,255,.3);}
+
+  /* WARUM */
+  .why-danone h2{text-align:center;font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:800;}
+  .why-danone .lead{max-width:68ch;margin:16px auto 0;font-size:1.05rem;line-height:1.75;text-align:center;color:var(--muted);}
+  .journey-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:38px;}
+  .journey-card{background:var(--mist);border-radius:14px;padding:20px 18px;text-align:center;}
+  .journey-card.accent{background:var(--blue);color:var(--white);}
+  .journey-card .journey-step{font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.65;}
+  .journey-card .journey-name{font-weight:800;font-size:1.1rem;margin:6px 0 4px;}
+  .journey-card .journey-tag{font-size:.82rem;font-weight:700;color:var(--blue);margin-bottom:8px;}
+  .journey-card.accent .journey-tag{color:#BFE3FF;}
+  .journey-card .journey-desc{font-size:.86rem;line-height:1.5;opacity:.9;}
+  @media (max-width:760px){.journey-grid{grid-template-columns:1fr;}}
+  @media (min-width:761px) and (max-width:1020px){.journey-grid{grid-template-columns:repeat(2,1fr);}}
+
+  /* KONTAKT */
+  .contact{background:var(--blue);color:var(--white);text-align:center;}
+  .contact h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:800;}
+  .contact p{margin-top:12px;color:#BFE3FF;font-weight:500;}
+  .contact .cta-row{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  footer{background:var(--navy);color:rgba(255,255,255,.75);text-align:center;padding:22px 0;font-size:.85rem;}
+
+  @media (max-width:760px){
+    section{padding:56px 0;}
+    .card-row,.plan-cols,.cv-grid,.erfolge-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <span class="eyebrow">Bewerbung · Bezirksleiter im LEH · Region Mannheim</span>
+        <h1>Marc Webersdorfer – Vertrieb mit Leidenschaft, Umsatzkraft und Biss.</h1>
+        <div class="sub">Verkaufstalent mit Biss</div>
+        <div class="cta-row">
+          <a href="#pitch" class="btn btn-white">▶ Zum Video</a>
+          <a href="Lebenslauf_Marc_Webersdorfer.pdf" target="_blank" class="btn btn-outline">Lebenslauf (PDF)</a>
+        </div>
+      </div>
+      <div class="hero-photo"><img src="marc-hero.png" alt="Marc Webersdorfer"></div>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="section-cream">
+    <div class="wrap intro-grid">
+      <div class="intro-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </svg>
+      </div>
+      <div>
+        <h2>Ein echter Partner für Handel &amp; Team.</h2>
+        <p>Ich bringe Menschen, Marken und Regale zusammen – mit klaren Zielen, Energie auf der Fläche und einem Gespür für nachhaltige Kundenbeziehungen. 25+ Jahre FMCG-Vertrieb, davon 12 Jahre als Bezirksleiter im Außendienst bei einem führenden Konsumgüterkonzern.</p>
+        <div class="tag-row">
+          <span class="tag">POS-Exzellenz</span>
+          <span class="tag">Vertrieb</span>
+          <span class="tag">Verbindlichkeit</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap card-row">
+      <div class="card card-white">
+                <h3>POS-Exzellenz</h3>
+          <p>Ich sorge dafür, dass Marken im Regal sichtbar werden – mit aufmerksamkeitsstarken Platzierungen, klaren Routinen und einem sicheren Blick für die Details, die Kaufimpulse auslösen.</p>
+      </div>
+      <div class="card card-red">
+        <h3>Kundenorientierung</h3>
+        <p>Vertrauen entsteht für mich durch Zuverlässigkeit und konkrete Lösungen. Ich verstehe die Ziele meiner Handelspartner und entwickle Maßnahmen, die für beide Seiten funktionieren.</p>
+      </div>
+      <div class="card card-outline">
+        <h3>Zuverlässige Umsetzung</h3>
+        <p>Von der Idee bis zur Auswertung halte ich Zusagen ein und bleibe nah an der Umsetzung. So werden aus guten Konzepten messbare Ergebnisse im Tagesgeschäft.</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- ERFAHRUNG IM ECHTEN VERTRIEB -->
+  <section class="exp-banner">
+    <div class="wrap">
+      <div class="exp-intro">
+        <div class="exp-kicker">Ich bringe etwas mit, das man nicht studieren, downloaden oder in einem CRM abbilden kann:</div>
+        <h2>Erfahrung im echten Vertrieb.</h2>
+        <div class="exp-tagline">Zehn Fähigkeiten, die nur im echten Kundenkontakt entstehen – nicht im Hörsaal.</div>
+      </div>
+            <div class="exp-grid">
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+          <div><h4>Menschen lesen</h4><p>Mikro-Signale, Körpersprache, Dynamiken spüren.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"></circle><line x1="12" y1="22" x2="12" y2="8"></line><path d="M5 12H2a10 10 0 0 0 20 0h-3"></path></svg></div>
+          <div><h4>Souveränität in Krisen</h4><p>Ruhig bleiben bei Druck und Konflikten.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"></path></svg></div>
+          <div><h4>Beziehungsaufbau</h4><p>Echtes Vertrauen und emotionale Bindung schaffen.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+          <div><h4>Storytelling</h4><p>Nutzen anschaulich vermitteln.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+          <div><h4>Komplexe Verhandlungen</h4><p>Preisgespräche und schwierige Deals souverän führen.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></div>
+          <div><h4>Netzwerkpflege</h4><p>Langfristige Beziehungen aktiv knüpfen.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <div><h4>Einwände antizipieren</h4><p>Einwände frühzeitig erkennen und entkräften.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+          <div><h4>Strategisches Denken</h4><p>Muster und Marktbewegungen erkennen.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+          <div><h4>Kundenpsychologie</h4><p>Emotionale und soziale Entscheidungsprozesse verstehen.</p></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></div>
+          <div><h4>Langfristige Kundenbindung</h4><p>Kunden über Jahre hinweg betreuen.</p></div>
+        </div>
+      </div>
+  </section>
+
+    <!-- PITCH VIDEO -->
+  <section id="pitch" class="pitch section-cream">
+    <div class="wrap">
+      <h2>Mein Pitch in 2 Minuten</h2>
+      <div class="video-frame">
+        <video controls playsinline preload="metadata" poster="video-poster.jpg" style="width:100%;height:100%;border-radius:20px;display:block;">
+          <source src="https://mwebersdorfer.github.io/marc-webersdorfer-bewerbung/2MinPitch.mp4" type="video/mp4">
+          Ihr Browser unterstützt das Video-Format leider nicht.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEBENSLAUF -->
+  <section class="section-white">
+    <div class="wrap cv-grid">
+      <div>
+        <h2>Lebenslauf in Kürze</h2>
+        <p>25+ Jahre Erfahrung im FMCG-Vertrieb, im Aufbau starker Handelspartnerschaften und in der Zusammenarbeit mit leistungsstarken Verkaufsteams im Handel. Mein Schwerpunkt: Potenziale auf der Fläche sichtbar und messbar machen. Diplom-Betriebswirt (FH), International Business, FH Darmstadt.</p>
+        <div style="margin-top:20px;">
+          <a href="Lebenslauf_Marc_Webersdorfer.pdf" target="_blank" class="btn btn-blue">⬇ Lebenslauf als PDF</a>
+        </div>
+      </div>
+            <div class="stations-box">
+        <h3>Stationen</h3>
+        <p>Field Account Manager (Mannheim · Heidelberg · Kaiserslautern · Saarland) · Category Management · Market Planning · 23 Jahre bei Procter & Gamble, davor Intersnack und Wolf Bergstrasse, seither B2B-Vertrieb und digitale Weiterqualifizierung</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ERFOLGE -->
+  <section class="erfolge section-cream">
+    <div class="wrap">
+      <h2>Meine besten Erfolge</h2>
+      <div class="erfolge-grid">
+        <div class="erfolg-card e1">
+          <div class="big">TOP 10</div>
+          <h4>Top-Platzierung im Ranking</h4>
+          <p>Herausforderung: hoher Wettbewerbsdruck im Waschmittelsegment. Lösung: konsequente POS-Exzellenz und enge Handelsbetreuung. Ergebnis: Top-10-Platzierung deutschlandweit.</p>
+        </div>
+        <div class="erfolg-card e2">
+          <div class="big">NR. 1</div>
+          <h4>Nr. 1 in Deutschland</h4>
+          <p>Herausforderung: geringe Sichtbarkeit einer Produktneueinführung. Lösung: bundesweite Zweitplatzierungs-Aktion. Ergebnis: Platz 1 in Deutschland mit 120 Displays.</p>
+        </div>
+        <div class="erfolg-card e3">
+          <div class="big">250 %</div>
+          <h4>Aktionsziel weit übertroffen</h4>
+          <p>Herausforderung: ambitionierte Vorgabe für eine LKW-Aktion. Lösung: gezielte, priorisierte Handelsansprache. Ergebnis: 250 % Zielerreichung.</p>
+        </div>
+        <div class="erfolg-card e4">
+          <div class="big">AWARD</div>
+          <h4>Teamleistung ausgezeichnet</h4>
+          <p>Herausforderung: bereichsübergreifende Zusammenarbeit stärken. Lösung: aktive Mitgestaltung einer Team-Initiative. Ergebnis: „Mission Possible – We Can Award" gewonnen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="gallery section-white">
+    <div class="wrap">
+      <h2>POS-Aufbauten, die Lust machen</h2>
+      <p class="hint">Reale POS-Aktionen aus über 25 Jahren FMCG-Vertrieb – von Zweitplatzierungen bis zu großflächigen Themenwelten.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item tall"><img src="pos-ariel.jpg" alt="Ariel Gondelkopf Aufbau"></div>
+        <div class="gallery-item"><img src="pos-blendamed.jpg" alt="Blend-a-med Palettenaufbau"></div>
+        <div class="gallery-item"><img src="pos-gillette.jpg" alt="Gillette Zweitplatzierung"></div>
+        <div class="gallery-item"><img src="pos-oldspice.jpg" alt="Old Spice Themenaufbau"></div>
+        <div class="gallery-item"><img src="pos-oralb-1.jpg" alt="Oral-B Messestand Aktion"></div>
+        <div class="gallery-item"><img src="pos-oralb-2.jpg" alt="Oral-B Kofferraum Verkaufsaktion"></div>
+        <div class="gallery-item"><img src="pos-lenor-mall.jpg" alt="Lenor Aufbau im Einkaufszentrum"></div>
+        <div class="gallery-item"><img src="pos-lenor-lkw.jpg" alt="Lenor LKW Verkaufsaktion"></div>
+      </div>
+    </div>
+  </section>
+
+    <!-- WIE ICH ARBEITE -->
+  <section class="work">
+    <div class="wrap">
+      <h2>Wie ich arbeite: präsent, strukturiert, umsetzungsstark</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-title">Besuchsplanung nach Potenzial</div>
+          <div class="work-desc">Ich priorisiere Märkte nach Umsatz, Entwicklungspotenzial, Entfernung und aktuellem Handlungsbedarf – mit hoher Präsenz und konsequenter POS-Betreuung.</div>
+        </div>
+        <div class="work-card accent">
+          <div class="work-title">Klare Ziele für jeden Besuch</div>
+          <div class="work-desc">Jeder Besuch hat ein konkretes Ziel – etwa eine Sortimentslücke zu schließen, die Regalqualität zu verbessern oder eine Zweitplatzierung vorzubereiten.</div>
+        </div>
+        <div class="work-card">
+          <div class="work-title">Konsequente Dokumentation</div>
+          <div class="work-desc">Ich halte Beobachtungen, Fotos, Vereinbarungen und nächste Schritte unmittelbar fest – strukturierte Nachbereitung gehört für mich zur professionellen Kundenbetreuung.</div>
+        </div>
+        <div class="work-card accent">
+          <div class="work-title">Steuerung über Kennzahlen</div>
+          <div class="work-desc">Ich überprüfe regelmäßig Zielerreichung, Distribution, Verfügbarkeit und Platzierungsqualität und leite daraus konkrete nächste Maßnahmen ab.</div>
+        </div>
+        <div class="work-card">
+          <div class="work-title">Umsetzung am POS</div>
+          <div class="work-desc">Ich bleibe nicht bei der Absprache stehen: Wenn eine Maßnahme Unterstützung braucht, packe ich am POS mit an und sorge für eine saubere Umsetzung.</div>
+        </div>
+        <div class="work-card accent">
+          <div class="work-title">Verbindlichkeit im Kundenkontakt</div>
+          <div class="work-desc">Ich bereite Gespräche sorgfältig vor, treffe klare Vereinbarungen und halte deren Umsetzung nach – so entsteht Vertrauen durch zuverlässige Ergebnisse.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAIL 100-TAGE -->
+  <section class="plan-detail section-cream">
+    <div class="wrap">
+      <h2>Mein Plan für die ersten 100 Tage</h2>
+      <p class="lead">Präsent im Markt. Klar in der Analyse. Konsequent in der Umsetzung.</p>
+      <div class="plan-cols">
+        <div class="pd-card pd-white">
+          <div class="phase-label">Tag 1–30</div>
+          <div class="phase-title">Kennenlernen &amp; Analyse</div>
+          <div class="goal">Ziel: Den Bezirk, die Menschen und die größten Potenziale fundiert verstehen.</div>
+          <ul>
+            <li>Alle A-Kunden in Mannheim, Heidelberg und Umgebung besuchen</li>
+            <li>Distribution, Verfügbarkeit, Regalqualität und Zweitplatzierungen analysieren</li>
+            <li>Wettbewerber, Preise, Aktionen und Sortimentsentwicklung systematisch erfassen</li>
+            <li>Interne Ansprechpartner, Abläufe und Entscheidungswege kennenlernen</li>
+          </ul>
+          <div class="result">Ergebnis: Eine belastbare Prioritätenliste für Märkte, Maßnahmen und Kundenpotenziale.</div>
+        </div>
+        <div class="pd-card pd-red">
+          <div class="phase-label">Tag 31–60</div>
+          <div class="phase-title">Quick Wins &amp; Beziehungen</div>
+          <div class="goal">Ziel: Erste sichtbare Verbesserungen schaffen und tragfähige Handelsbeziehungen aufbauen.</div>
+          <ul>
+            <li>Drei bis fünf geeignete Zweitplatzierungen realisieren und vereinbaren</li>
+            <li>Regal-Checks mit Filialleitungen und klaren Folgeterminen durchführen</li>
+            <li>Eine strukturierte Feedback-Runde mit Marktverantwortlichen durchführen</li>
+          </ul>
+          <div class="result">Ergebnis: Frühe, messbare POS-Verbesserungen und verlässliche Vereinbarungen mit den wichtigsten Kunden.</div>
+        </div>
+        <div class="pd-card pd-yellow">
+          <div class="phase-label">Tag 61–100</div>
+          <div class="phase-title">Strategie &amp; Skalierung</div>
+          <div class="goal">Ziel: Erfolgreiche Routinen im Gebiet verbindlich verankern und den gesamten Bezirk systematisch steuern.</div>
+          <ul>
+            <li>Bezirksziele für Umsatz, Distribution, Regalanteil und Zweitplatzierungen optimieren</li>
+            <li>Besuchs- und Routenplanung nach Potenzial, Handlungsbedarf und Wirtschaftlichkeit optimieren</li>
+            <li>Ein kompaktes Reporting mit den wichtigsten Kennzahlen und Verantwortlichkeiten etablieren</li>
+            <li>Erfahrungen aus den ersten 100 Tagen in einen belastbaren Maßnahmenplan überführen</li>
+          </ul>
+          <div class="result">Ergebnis: Ein transparent gesteuerter Bezirk mit klarer Roadmap für nachhaltiges Wachstum.</div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- WARUM DANONE -->
+  <section class="why-danone section-white">
+    <div class="wrap">
+      <h2>Warum Danone?</h2>
+      <p class="lead">Meine Vertriebslaufbahn hat mit Pom-Bär und Chio Chips im Lebensmittelhandel begonnen, bei Procter &amp; Gamble kamen Pringles, Waschmittel und Körperpflege dazu. Bei Danone kommt beides zusammen: Marken, die der Handel kennt und die Verbraucher gezielt suchen – und ein Sortiment, bei dem Verfügbarkeit, Regalqualität und Präsenz am POS jeden Tag zählen.</p>
+      <p class="lead">Dazu kommt das Gebiet: Mannheim und Heidelberg kenne ich aus vielen Jahren im eigenen Bezirk – die Märkte, die Händler und die Wege dazwischen. Genau dort möchte ich wieder tun, was mir im Vertrieb am meisten liegt: raus zum Kunden, ans Regal und einen Bezirk eigenverantwortlich weiterentwickeln.</p>
+      <div class="journey-grid">
+        <div class="journey-card">
+          <div class="journey-step">Station 1</div>
+          <div class="journey-name">Wolf Bergstrasse</div>
+          <div class="journey-tag">Familiär &amp; bodenständig</div>
+          <div class="journey-desc">Mittelständisches Familienunternehmen – hier habe ich Vertrieb von der Pike auf gelernt.</div>
+        </div>
+        <div class="journey-card">
+          <div class="journey-step">Station 2</div>
+          <div class="journey-name">Intersnack</div>
+          <div class="journey-tag">Gewachsen &amp; bodenständig geblieben</div>
+          <div class="journey-desc">Größer und internationaler, aber mit spürbar familiärer Prägung – Pom-Bär und Chio als erste starke Marken.</div>
+        </div>
+        <div class="journey-card">
+          <div class="journey-step">Station 3</div>
+          <div class="journey-name">Procter &amp; Gamble</div>
+          <div class="journey-tag">Konzern-Exzellenz</div>
+          <div class="journey-desc">23 Jahre professionelle Vertriebssysteme und Prozesse auf Weltklasse-Niveau mitgestaltet.</div>
+        </div>
+        <div class="journey-card accent">
+          <div class="journey-step">Nächste Station</div>
+          <div class="journey-name">Danone</div>
+          <div class="journey-tag">Starke Marken, bekanntes Gebiet</div>
+          <div class="journey-desc">Volvic, Alpro, Actimel, Fruchtzwerge – im Bezirk Mannheim, den ich aus eigener Erfahrung kenne.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section class="contact">
+    <div class="wrap">
+            <h2>Lust auf ein Gespräch?</h2>
+      <p>Ich freue mich darauf, Ihre nächste Erfolgsgeschichte im Handel mitzugestalten.</p>
+      <p style="margin-top:8px;font-size:.9rem;opacity:.85;">23 Jahre Procter & Gamble, davor Intersnack und Wolf Bergstrasse.</p>
+      <div class="cta-row">
+        <a href="https://www.linkedin.com/in/marc-webersdorfer" target="_blank" rel="noopener" class="btn btn-white">🔗 Auf LinkedIn vernetzen</a>
+        <a href="mailto:marcwebersdorfer@hotmail.de?subject=Kontakt%20-%20Bewerbung%20Bezirksleiter%20LEH%20Region%20Mannheim" class="btn btn-outline">✉ E-Mail senden</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Marc Webersdorfer · Bezirksleiter · <a href="tel:+491777932783" style="color:inherit;text-decoration:underline;">+49 177 7932783</a>
+  </footer>
+
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e00f872d65384c59867030170805bf1e"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
