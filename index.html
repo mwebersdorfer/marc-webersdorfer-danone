@@ -218,6 +218,36 @@
   @media (min-width:761px) and (max-width:1020px){.bridge-grid{grid-template-columns:repeat(2,1fr);}}
   .hero-stat b{white-space:nowrap;} .hero-stat span{display:block;line-height:1.3;margin-top:4px;}
   @media (max-width:480px){.hero-stats{grid-template-columns:repeat(3,1fr);} .hero-stat{padding:8px 10px;} .hero-stat b{font-size:1.45rem;} .hero-stat span{font-size:.72rem;}}
+
+  /* ---------- MBU ---------- */
+  .mbu{background:var(--navy);color:var(--white);}
+  .mbu .kicker{color:var(--sky);}
+  .mbu .lead-p{color:#C9DDF2;margin-left:0;}
+  .mbu-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;margin-top:30px;align-items:stretch;}
+  .mbu-map{background:#0A3A8C;border-radius:16px;padding:14px;}
+  .mbu-map svg{width:100%;height:auto;display:block;}
+  .mbu-map .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:.82rem;margin:6px 6px 2px;color:#C9DDF2;}
+  .mbu-map .legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px;}
+  .mbu-cust{display:grid;gap:12px;}
+  .mbu-card{background:rgba(255,255,255,.08);border-radius:14px;padding:20px 22px;border-left:5px solid var(--sky);}
+  .mbu-card.st{border-left-color:#8FD16A;}
+  .mbu-card h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.45rem;font-weight:700;margin-bottom:6px;}
+  .mbu-card p{margin:0;font-size:.93rem;color:#DCE9F7;}
+  .mbu-card .small{font-size:.82rem;opacity:.8;margin-top:6px;}
+  .mbu-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .mbu-facts div{background:var(--blue);border-radius:14px;padding:14px 18px;}
+  .mbu-facts b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:2.2rem;line-height:1;font-weight:800;}
+  .mbu-facts span{font-size:.84rem;color:#C9DDF2;}
+  .mbu-do{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:22px;}
+  .mbu-do div{background:var(--white);color:var(--ink);border-radius:14px;padding:20px;border-top:4px solid var(--sky);}
+  .mbu-do h4{font-weight:800;font-size:1.05rem;margin-bottom:6px;}
+  .mbu-do p{margin:0;font-size:.9rem;color:var(--muted);}
+  .mbu-case{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center;margin-top:22px;background:rgba(255,255,255,.08);border-radius:16px;padding:20px;}
+  .mbu-case img{width:100%;border-radius:10px;display:block;}
+  .mbu-case h4{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.4rem;font-weight:700;color:var(--sky);margin-bottom:8px;}
+  .mbu-case p{margin:0 0 10px;font-size:.95rem;color:#DCE9F7;}
+  .mbu-case .bridge-line{margin:0;padding-top:10px;border-top:1px solid rgba(255,255,255,.2);font-weight:600;color:var(--white);}
+  @media (max-width:760px){.mbu-grid,.mbu-do,.mbu-case{grid-template-columns:1fr;}.mbu-case img{max-width:260px;}}
 </style>
 </head>
 <body>
@@ -265,7 +295,7 @@
           <p class="lead-p" style="margin-left:0;">12 Jahre war ich als Field Account Manager bei Procter &amp; Gamble im Lebensmitteleinzelhandel unterwegs – mit eigenem Gebiet von Mannheim und Heidelberg bis Kaiserslautern und ins Saarland, später auch im Rhein-Main-Gebiet.</p>
           <ul class="home-list">
             <li><b>Eigener Kundenstamm</b> mit 80+ Verbrauchermärkten: Real, REWE, Kaufland, Globus, Edeka inkl. E-Center und Marktkauf.</li>
-            <li><b>Selbstständige Händler und Mehrbetriebsunternehmer</b>, u. a. Scheck-In in Mannheim, Viernheim und Heidelberg – mit eigenen Jahresplanungsgesprächen bei einzelnen Kunden.</li>
+            <li><b>Selbstständige Händler und Mehrbetriebsunternehmer</b>, u. a. Scheck-In (Mannheim, Heidelberg, Weinheim, Viernheim) und EDEKA Stiegler (Speyer, Frankenthal, Haßloch, Bad Dürkheim) – <a href="#mbu" style="color:var(--blue);font-weight:600;">mehr dazu ↓</a></li>
             <li><b>Eigenständige Tourenplanung</b> im 2-Wochen-Besuchsrhythmus.</li>
           </ul>
         </div>
@@ -304,6 +334,49 @@
           <h3>Partner für Handel, KAM &amp; Team</h3>
           <p>Vertriebsstrategien gemeinsam mit dem Key Account Management in der Region umsetzen, Schulungen und Workshops durchführen und Wissen im Team weitergeben.</p>
           <p class="proof">Beleg: „Mission Possible – We Can Award" für eine bereichsübergreifende Team-Initiative.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MBU -->
+  <section id="mbu" class="mbu">
+    <div class="wrap">
+      <div class="kicker">MBU · Mehrbetriebsunternehmer</div>
+      <h2 class="title">Kaufleute, die ich kenne.</h2>
+      <p class="lead-p">Selbstständige Kaufleute mit mehreren Märkten denken in Umsatz pro Markt – nicht in Kategorien. Genau mit ihnen habe ich bei Procter &amp; Gamble gearbeitet: mitten im Bezirk, um den es bei Danone geht.</p>
+      <div class="mbu-grid">
+        <div class="mbu-map">
+          <svg viewBox="0 0 520 380" role="img" aria-label="Karte der betreuten MBU-Standorte in der Rhein-Neckar-Region"><path d="M219,-10 C240,40 268,90 271,126 C275,170 282,200 278,232 C274,270 282,300 278,317 C272,350 250,370 241,392" fill="none" stroke="#3DB0FF" stroke-width="5" opacity=".35" stroke-linecap="round"/><path d="M500,250 C470,245 452,238 442,234 C410,222 380,200 360,190 C330,175 305,155 290,145" fill="none" stroke="#3DB0FF" stroke-width="3.5" opacity=".3" stroke-linecap="round"/><text x="230" y="60" fill="#3DB0FF" opacity=".7" font-size="13" font-style="italic" font-family="Figtree,sans-serif" transform="rotate(62 230 60)">Rhein</text><text x="372" y="214" fill="#3DB0FF" opacity=".7" font-size="12" font-style="italic" font-family="Figtree,sans-serif" transform="rotate(25 372 214)">Neckar</text><circle cx="290" cy="139" r="15" fill="#3DB0FF" opacity=".18"/><circle cx="290" cy="139" r="7" fill="#3DB0FF" stroke="#fff" stroke-width="2"/><text x="278" y="143" text-anchor="end" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Mannheim ×2</text><circle cx="442" cy="234" r="15" fill="#3DB0FF" opacity=".18"/><circle cx="442" cy="234" r="7" fill="#3DB0FF" stroke="#fff" stroke-width="2"/><text x="442" y="262" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Heidelberg ×2</text><circle cx="439" cy="75" r="15" fill="#3DB0FF" opacity=".18"/><circle cx="439" cy="75" r="7" fill="#3DB0FF" stroke="#fff" stroke-width="2"/><text x="430" y="54" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Weinheim</text><circle cx="373" cy="84" r="15" fill="#3DB0FF" opacity=".18"/><circle cx="373" cy="84" r="7" fill="#3DB0FF" stroke="#fff" stroke-width="2"/><text x="361" y="76" text-anchor="end" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Viernheim</text><circle cx="208" cy="90" r="15" fill="#8FD16A" opacity=".18"/><circle cx="208" cy="90" r="7" fill="#8FD16A" stroke="#fff" stroke-width="2"/><text x="196" y="94" text-anchor="end" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Frankenthal ×2</text><circle cx="264" cy="321" r="15" fill="#8FD16A" opacity=".18"/><circle cx="264" cy="321" r="7" fill="#8FD16A" stroke="#fff" stroke-width="2"/><text x="252" y="325" text-anchor="end" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Speyer ×2</text><circle cx="137" cy="272" r="15" fill="#8FD16A" opacity=".18"/><circle cx="137" cy="272" r="7" fill="#8FD16A" stroke="#fff" stroke-width="2"/><text x="149" y="276" text-anchor="start" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Haßloch</text><circle cx="70" cy="167" r="15" fill="#8FD16A" opacity=".18"/><circle cx="70" cy="167" r="7" fill="#8FD16A" stroke="#fff" stroke-width="2"/><text x="82" y="171" text-anchor="start" fill="#fff" font-size="15" font-weight="700" font-family="Figtree,sans-serif">Bad Dürkheim</text></svg>
+          <div class="legend"><span><i style="background:#3DB0FF"></i>Scheck-In</span><span><i style="background:#8FD16A"></i>EDEKA Stiegler</span></div>
+        </div>
+        <div class="mbu-cust">
+          <div class="mbu-card">
+            <h3>Scheck-In</h3>
+            <p>Center in Mannheim (2), Heidelberg (2), Weinheim und Viernheim.</p>
+            <p class="small">Später zusätzlich die Märkte im Raum Frankfurt und Mainz.</p>
+          </div>
+          <div class="mbu-card st">
+            <h3>EDEKA Stiegler</h3>
+            <p>Märkte in Speyer (2), Frankenthal (2), Haßloch und Bad Dürkheim.</p>
+          </div>
+          <div class="mbu-facts">
+            <div><b>2</b><span>Mehrbetriebsunternehmer</span></div>
+            <div><b>12</b><span>Standorte in der Region</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="mbu-do">
+        <div><h4>Distribution ausbauen</h4><p>Zusätzliche Distribution für gelistete Artikel – Markt für Markt.</p></div>
+        <div><h4>Individuelle Marktabsprachen</h4><p>Maßnahmen pro Markt mit dem Kaufmann abgestimmt, bei einzelnen Kunden mit eigenen Jahresplanungsgesprächen.</p></div>
+        <div><h4>Marktübergreifend vereinbaren</h4><p>Vereinbarungen, die für mehrere Standorte eines Unternehmers gleichzeitig gelten.</p></div>
+      </div>
+      <div class="mbu-case">
+        <img src="mbu-pampers-weinheim.jpg" alt="Plakat: Pampers-Kinderfotoaktion im Marktkauf, Scheck-In Center Weinheim">
+        <div>
+          <h4>Beispiel: Kinderfotoaktion in Weinheim</h4>
+          <p>Vier Tage Pampers-Fotoshooting mit Profi-Fotograf im Marktkauf des Scheck-In Centers Weinheim – eine Aktion, die junge Familien in den Markt holt und dem Kaufmann Frequenz bringt.</p>
+          <p class="bridge-line">Für Danone heißt das: Fruchtzwerge, Actimel &amp; Co. sprechen dieselben Familien an. Wer dem Kaufmann zeigt, wie das Kühlregal mehr dreht, entwickelt alle seine Märkte gleichzeitig.</p>
         </div>
       </div>
     </div>
